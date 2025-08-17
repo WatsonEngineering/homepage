@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watson Engineering LTD - Consulting Services</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light Grey */
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-gray-800 mb-4 text-center;
+        }
+        .section-subtitle {
+            @apply text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto;
+        }
+        .nav-link {
+            @apply text-white hover:text-blue-300 transition-colors duration-300;
+        }
+        .btn {
+            @apply px-6 py-3 rounded-lg font-semibold text-white transition-colors duration-300;
+        }
+        .btn-primary {
+            @apply bg-blue-600 hover:bg-blue-700;
+        }
+        .btn-secondary {
+            @apply bg-gray-700 hover:bg-gray-800;
+        }
+        .loader {
+            border: 4px solid #e5e7eb; /* Lighter grey for loader track */
+            border-top: 4px solid #3b82f6; /* Blue for loader spinner */
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="text-gray-700">
+
+    <!-- Header & Navigation -->
+    <header id="home" class="bg-black sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#home">
+                <img src="http://googleusercontent.com/file_content/0" alt="Watson Engineering Logo" class="h-12" onerror="this.onerror=null; this.src='https://placehold.co/200x50/000000/ffffff?text=Watson+Engineering';">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="nav-link">About Me</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#consultation" class="btn btn-primary">Free Consultation</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black">
+            <a href="#about" class="block text-center nav-link py-3 px-4 text-sm">About Me</a>
+            <a href="#services" class="block text-center nav-link py-3 px-4 text-sm">Services</a>
+            <a href="#portfolio" class="block text-center nav-link py-3 px-4 text-sm">Portfolio</a>
+            <a href="#consultation" class="block text-center nav-link py-3 px-4 text-sm bg-gray-800">Free Consultation</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-black text-white relative">
+             <div class="absolute inset-0 bg-black opacity-60"></div>
+             <div class="container mx-auto px-6 py-24 md:py-32 relative z-10 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Innovative Engineering Solutions</h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">Watson Engineering delivers expert consulting services to bring your most complex projects to life.</p>
+                <a href="#consultation" class="btn btn-primary text-lg">Request a Consultation</a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                    <div class="md:col-span-4">
+                        <img src="https://placehold.co/400x400/e2e8f0/334155?text=Your+Photo" alt="Your Name" class="rounded-full mx-auto shadow-xl w-64 h-64 md:w-full md:h-auto object-cover">
+                    </div>
+                    <div class="md:col-span-8 text-center md:text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold text-black mb-4">About Me</h2>
+                        <h3 class="text-xl font-semibold text-blue-600 mb-4">David Watson</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            With over 8 years of experience in mechanical, structural, and aerosspace engineering, I founded Watson Engineering to provide clients with innovative, reliable, and cost-effective solutions. My passion for problem-solving and my commitment to quality are the driving forces behind my work.
+                        </p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            I specialize in [Your Specialization 1], [Your Specialization 2], and [Your Specialization 3]. I hold a Master's degree in Mechanical Engineering from [Your University] and I am a licensed Professional Engineer in [Your State/Province]. Let's build something great together.
+                        </p>
+                        <a href="#portfolio" class="btn btn-secondary">View My Work</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 md:py-28 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">We provide a comprehensive range of engineering services tailored to meet the unique needs of each client.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service Cards... -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                        <div class="text-blue-600 mb-4"><i class="fas fa-drafting-compass fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2 text-black">Mechanical Design</h3>
+                        <p class="text-gray-600">From concept to production, we create robust and efficient mechanical designs using cutting-edge CAD software.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                        <div class="text-blue-600 mb-4"><i class="fas fa-cogs fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2 text-black">Structural Analysis</h3>
+                        <p class="text-gray-600">Ensuring safety and performance with detailed finite element analysis (FEA) and structural simulations.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                        <div class="text-blue-600 mb-4"><i class="fas fa-vial fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2 text-black">Prototyping & Testing</h3>
+                        <p class="text-gray-600">Rapid prototyping and rigorous testing to validate designs and accelerate your product development cycle.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                        <div class="text-blue-600 mb-4"><i class="fas fa-tasks fa-3x"></i></div>
+                        <h3 class="text-xl font-bold mb-2 text-black">Project Management</h3>
+                        <p class="text-gray-600">Expert guidance from start to finish, ensuring your project is delivered on time and within budget.</p>
+                    </div>
+                </div>
+
+                <!-- Gemini Project Scoping Assistant -->
+                <div class="mt-20 bg-white p-8 md:p-12 rounded-xl shadow-xl max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-bold text-black mb-2 text-center">✨ AI-Powered Project Scoping Assistant</h3>
+                    <p class="text-gray-600 mb-6 text-center">Have an idea? Describe your project below, and our AI assistant will suggest a preliminary scope of work.</p>
+                    <textarea id="project-description" rows="5" class="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., 'I want to design a new type of ergonomic office chair that can be manufactured sustainably.'"></textarea>
+                    <div class="text-center mt-6">
+                        <button id="scope-generator-btn" class="btn btn-primary text-lg">Analyze Project Scope</button>
+                    </div>
+                    <div id="scope-results-loader" class="hidden loader"></div>
+                    <div id="scope-results" class="mt-8 p-6 bg-gray-50 rounded-lg border border-gray-200 hidden"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Project Portfolio</h2>
+                <p class="section-subtitle">Explore a selection of our successful projects that showcase our commitment to excellence and innovation.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Portfolio Items... -->
+                    <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden group">
+                        <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Project+Alpha" alt="Project Alpha" class="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-black">Aerospace Component Design</h3>
+                            <p class="text-gray-600">Developed a lightweight, high-strength component for a next-generation satellite system.</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden group">
+                        <img src="https://placehold.co/600x400/10b981/ffffff?text=Project+Beta" alt="Project Beta" class="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-black">Automated Manufacturing System</h3>
+                            <p class="text-gray-600">Designed and implemented a robotic arm system that increased production efficiency by 40%.</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden group">
+                        <img src="https://placehold.co/600x400/f97316/ffffff?text=Project+Gamma" alt="Project Gamma" class="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-black">Consumer Product Development</h3>
+                            <p class="text-gray-600">Engineered a new ergonomic handheld device, from initial sketches to a market-ready product.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consultation Section -->
+        <section id="consultation" class="py-20 md:py-28 bg-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">Set Up a Free Consultation</h2>
+                <p class="section-subtitle">Let's discuss your project. Book a complimentary 30-minute consultation to see how Watson Engineering can bring your ideas to life.</p>
+                <div class="max-w-md mx-auto">
+                    <!-- 
+                        **IMPORTANT**: Replace the '#' in the href attribute below with your actual 
+                        Google Calendar appointment scheduling link.
+                        You can create one here: https://calendar.google.com/calendar/u/0/appointments/schedules/create
+                    -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary text-xl w-full flex items-center justify-center">
+                        <i class="far fa-calendar-alt mr-3"></i>
+                        Book Your Consultation
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <!-- About -->
+                <div>
+                    <a href="#home">
+                         <img src="http://googleusercontent.com/file_content/0" alt="Watson Engineering Logo" class="h-12 mx-auto md:mx-0 mb-4" onerror="this.onerror=null; this.src='https://placehold.co/200x50/000000/ffffff?text=Watson+Engineering';">
+                    </a>
+                    <p class="text-gray-400">Engineering excellence and innovative solutions for a complex world.</p>
+                </div>
+                <!-- Links -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#about" class="hover:text-blue-300">About Me</a></li>
+                        <li class="mb-2"><a href="#services" class="hover:text-blue-300">Services</a></li>
+                        <li class="mb-2"><a href="#portfolio" class="hover:text-blue-300">Portfolio</a></li>
+                        <li class="mb-2"><a href="#consultation" class="hover:text-blue-300">Consultation</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contact Info</h4>
+                    <p class="text-gray-400 mb-2"><i class="fas fa-map-marker-alt mr-2"></i>123 Engineering Lane, Tech City, USA</p>
+                    <p class="text-gray-400 mb-2"><i class="fas fa-phone mr-2"></i>(555) 123-4567</p>
+                    <p class="text-gray-400"><i class="fas fa-envelope mr-2"></i>contact@watsonengineering.com</p>
+                    <div class="mt-4 flex justify-center md:justify-start space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Watson Engineering LTD. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        const navLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of navLinks) {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        }
+
+        // --- Gemini API Integration ---
+        const apiKey = ""; // API key is handled by the environment
+
+        // 1. Project Scoping Assistant
+        const scopeGeneratorBtn = document.getElementById('scope-generator-btn');
+        const projectDescription = document.getElementById('project-description');
+        const scopeResultsContainer = document.getElementById('scope-results');
+        const scopeLoader = document.getElementById('scope-results-loader');
+
+        scopeGeneratorBtn.addEventListener('click', async () => {
+            const description = projectDescription.value;
+            if (!description.trim()) {
+                scopeResultsContainer.innerHTML = `<p class="text-red-500">Please enter a project description first.</p>`;
+                scopeResultsContainer.classList.remove('hidden');
+                return;
+            }
+
+            scopeLoader.classList.remove('hidden');
+            scopeResultsContainer.classList.add('hidden');
+            scopeGeneratorBtn.disabled = true;
+
+            const prompt = `As an expert engineering consultant, analyze the following project description and provide a preliminary project scope. The output should be in HTML format.
+            The scope should include:
+            1.  A "Suggested Services" section with a bulleted list (ul/li) of relevant engineering services (e.g., Mechanical Design, Structural Analysis, Prototyping).
+            2.  A "Key Considerations" section with a bulleted list of important factors or potential challenges.
+            3.  A brief, encouraging closing statement.
+            Project Description: "${description}"`;
+
+            try {
+                const chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+                const payload = { contents: chatHistory };
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+                
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API request failed with status ${response.status}`);
+                }
+
+                const result = await response.json();
+                
+                if (result.candidates && result.candidates.length > 0 && result.candidates[0].content.parts[0].text) {
+                    const generatedText = result.candidates[0].content.parts[0].text;
+                    scopeResultsContainer.innerHTML = generatedText;
+                } else {
+                    throw new Error("Invalid response structure from API.");
+                }
+
+            } catch (error) {
+                console.error("Error with Gemini API:", error);
+                scopeResultsContainer.innerHTML = `<p class="text-red-500">Sorry, we couldn't generate the scope at this time. Please try again later.</p>`;
+            } finally {
+                scopeLoader.classList.add('hidden');
+                scopeResultsContainer.classList.remove('hidden');
+                scopeGeneratorBtn.disabled = false;
+            }
+        });
+    </script>
+
+</body>
+</html>
